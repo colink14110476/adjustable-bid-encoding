@@ -14,3 +14,18 @@ type AdjustmentData struct {
 	PlaceholderTxProof      [][]byte `ssz-size:"?,?" ssz-max:"64,1073741824"`
 	PlaceholderReceiptProof [][]byte `ssz-size:"?,?" ssz-max:"64,1073741824"`
 }
+
+type AdjustmentDataV2 struct {
+	ELTransactionsRoot      [32]byte  `ssz-size:"32"`
+	ELWithdrawalsRoot       [32]byte  `ssz-size:"32"`
+	BuilderAddress          [20]byte  `ssz-size:"20"`
+	BuilderProof            [][]byte  `ssz-size:"?,?" ssz-max:"64,1073741824"`
+	FeeRecipientAddress     [20]byte  `ssz-size:"20"`
+	FeeRecipientProof       [][]byte  `ssz-size:"?,?" ssz-max:"64,1073741824"`
+	FeePayerAddress         [20]byte  `ssz-size:"20"`
+	FeePayerProof           [][]byte  `ssz-size:"?,?" ssz-max:"64,1073741824"`
+	ELPlaceholderTxProof    [][]byte  `ssz-size:"?,?" ssz-max:"64,1073741824"`
+	CLPlaceholderTxProof    [][]byte  `ssz-size:"?,?" ssz-max:"64,1073741824"`
+	PlaceholderReceiptProof [][]byte  `ssz-size:"?,?" ssz-max:"64,1073741824"`
+	PrePaymentLogsBloom     [256]byte `ssz-size:"256"`
+}
